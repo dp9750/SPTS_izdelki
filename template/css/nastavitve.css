@@ -1,0 +1,19 @@
+.content-60 {
+  background-color: white;
+}
+
+.nav-tabs .nav-link {
+  color: #3498db;
+}
+
+.tab-content>.active {
+  padding: 20px 0;
+}
+
+.card-title {
+  margin-bottom: 0;
+}
+
+h5, .h5 {
+  font-size: 1.15rem;
+}

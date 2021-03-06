@@ -1,0 +1,374 @@
+.content form {
+  margin: 0;
+}
+
+.red {color: #c0392b; }
+
+.moznosti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  margin-left: 1%;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.moznosti-buttom {
+  background-color: #d7dfe0;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-bottom: 1px solid #8395a7;
+}
+
+.moznosti-buttom i {
+  margin-right: 10px;
+}
+
+.moznosti-active, .moznosti-buttom:hover {
+  background-color: #154360;
+  color: white;
+}
+
+.moznosti-vsebina {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.moznosti-vsebina select {
+  padding: 10px 14px;
+  display: block;
+  width: 100%;
+  transition: 0.4s;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.label-item {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.label-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.label-item:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.label-item input:checked ~ .checkmark {
+  background-color: #2980b9;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.label-item input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.label-item .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.ime-avtorja label, .naslov label {
+  display: block;
+  padding-bottom: 5px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.ime-avtorja input, .naslov input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.4s;
+  border: 1px solid #bdc3c7;
+  margin-bottom: 10px;
+}
+
+.ime-avtorja input:focus, .naslov input:focus {
+  outline: none;
+  border: 1px solid #3498db;
+}
+
+.ime-avtorja p, .naslov p {
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 10px;
+}
+
+span#txtHint, span#txtHintNaslov {
+  display: block;
+  font-family: 'Ubuntu', sans-serif;
+  color: #2980b9;
+}
+
+span#txtHint i, span#txtHintNaslov { display: inline-block; }
+
+.dodajAvtorja, .dodajNaslov {
+  display: inline-block;
+  cursor: pointer;
+  color: #2980b9;
+  margin-bottom: 10px;
+}
+
+#wrap {
+  width: 60%;
+  margin: 0 auto;
+  margin-left: 25%;
+  background: #d7dfe0;
+  border-radius: 7px;
+}
+
+#wrap header {
+  border-bottom: 1px solid #b6bdbe;
+  margin: 15px 22px 35px 22px;
+  padding-top: 20px;
+  position: relative;
+}
+
+#wrap header .list-style-buttons {
+  position: absolute;
+  right: 0;
+}
+
+.switcher {
+  padding: 9px 9px;
+}
+
+#wrap h2 {
+  line-height: 2.0em;
+  font-weight: normal;
+}
+
+#wrap footer {
+  border-top: 1px solid #b6bdbe;
+  padding-bottom: 40px;
+  margin: 15px 22px;
+}
+
+span.meta {
+  color: #93989b;
+  font-weight: normal;
+  font-size: 13px;
+  color: #93989b;
+}
+
+ul.list {
+  list-style: none;
+  width: 100%;
+}
+ul.list li {
+  display: block;
+  background: #c9d0d1;
+  padding: 10px 15px;
+}
+
+ul.list li:nth-child(even) {
+  background: #d7dfe0;
+}
+
+ul.list li div.left {
+  display: block;
+  float: left;
+  width: 65%;
+  position: relative;
+  padding-left: 20px;
+}
+
+ul.list li div.right {
+  display: block;
+  float: right;
+  margin-right: 10px;
+  width: 250px;
+  text-align: right;
+  position: relative;
+}
+
+ul.list li div.left img.thumb {
+  float: left;
+  margin-right: 10px;
+  width: 81px;
+  height: 81px;
+}
+
+ul.list li div.left h4 {
+  text-transform: uppercase;
+  color: #707375;
+}
+
+ul.list li div.right a {
+  background-color: #2980b9;
+  position: absolute;
+  padding: 10px 14px;
+  font-size: 13px;
+  right: 0;
+  top: 0;
+  transition: 0s;
+}
+
+ul.grid {
+  list-style: none;
+  padding: 0 25px 0 25px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+ul.grid li {
+  float: left;
+  width: 33.3%; /* 220px */
+  height: 200px;
+  position: relative;
+  text-align: center;
+  display: block;
+  height: 200px;
+  border-right: 1px solid #b6bdbe;
+  padding: 5px 22px;
+  margin-bottom: 20px;
+}
+
+ul.grid li:hover {
+  border-radius: 7px;
+}
+
+ul.grid li:nth-child(3n+3) {
+  border: 0;
+}
+
+ul.grid li div.left {
+  position: relative;
+}
+
+ul.grid li div.right { /* nothing */ }
+
+ul.grid li div.left {text-align: center;}
+
+ul.grid li div.left img.thumb {
+  width: 130px;
+  height: 130px;
+}
+
+ul.grid li div.left h4 {
+  text-transform: uppercase;
+  color: #707375;
+  margin-top: 10px;
+}
+
+ul.grid li div.left span.meta {
+  display: none;
+}
+
+ul.grid li div.right span.darkview {
+  opacity: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  background: rgba(40, 45, 55, 0.75);
+  overflow: hidden;
+  text-align: center;
+  padding-top: 80px;
+  transition: opacity 0.2s linear 0s;
+  -webkit-transition: opacity 0.2s linear 0s;
+  -moz-transition: opacity 0.25s linear 0s;
+  -o-transition: opacity 0.25s linear 0s;
+}
+ul.grid li:hover div.right span.darkview { opacity: 1; }
+
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; height: 0; }
+.clearfix { display: inline-block; }
+
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }
+
+@media only screen and (max-width: 1200px) {
+  .moznosti {
+    width: 25%;
+  }
+  #wrap {
+    margin-left: 30%;
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  button#gridview {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .moznosti {
+    display: none;
+  }
+  #wrap {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  #wrap header {
+    margin: 0;
+  }
+  #wrap .list-style-buttons {
+    display: none;
+  }
+  #wrap header h2 {
+    margin-left: 22px;
+  }
+  #wrap ul#products {
+    padding-top: 20px;
+  }
+  #wrap footer {
+    margin: 0;
+  }
+  #wrap span.meta {
+    display: none !important;
+  }
+}
